@@ -1,0 +1,66 @@
+<ion-header>
+  <ion-toolbar  color="tertiary">
+    <ion-title class="userName">Tu eres: {{messageData.Name}} </ion-title>
+  </ion-toolbar>
+</ion-header>
+<button  ion-item (click)="logout()">
+  <ion-icon name="log-out" ion-button color="success" text-color="success"></ion-icon>
+logout..
+</button>
+
+
+<ion-content #content padding id="container">
+  <ion-card *ngFor="let messageData of messageList" >
+    <ion-card-header>
+      {{messageData.Name}} dice: 
+    </ion-card-header>
+    <ion-card-content>
+      {{messageData.Message}}
+    </ion-card-content>
+    <ion-card-content>
+      <ion-img width="80" height="80" [src]="messageData.Image"></ion-img>
+    </ion-card-content>
+  </ion-card>
+</ion-content>
+  
+  <ion-card-content class="imageContainerButton"  *ngIf="!isUploading && !isUploaded">
+    <ion-button class="imageContainer">
+      <input id="uploadBtn" type="file" class="upload" (change)="uploadFile($event.target.files)" />
+    </ion-button>
+  </ion-card-content>
+
+  <ion-card class="ion-text-center" *ngIf="isUploading && !isUploaded">
+
+    <ion-card-content>
+      <div *ngIf="percentage | async as pct">
+        Porcentaje: {{ pct | number }}%
+        <b>Cargando Imagen</b>
+      </div>
+      <div *ngIf="snapshot | async as snap">
+        
+      </div>
+    </ion-card-content>
+  </ion-card>
+  
+  <ion-card class="ion-text-center" *ngIf="!isUploading && isUploaded">
+    <ion-card-header>
+        <b>Imagen cargada</b>
+    </ion-card-header>
+  </ion-card>
+
+
+<ion-footer id="final-scroll">
+  
+  <ion-toolbar>
+    <ion-input placeholder="Escribe tu mensaje..."  [(ngModel)]="messageData.Message"></ion-input>
+
+    <ion-buttons slot="end" >
+      <ion-button id="uploadBtn" type="file" class="upload" (click)= "uploadFile($event.target.files)" >
+      </ion-button>
+      <ion-button (click)="CreateRecord()">
+        <ion-icon name="send"></ion-icon>
+      </ion-button>
+
+    </ion-buttons>
+  </ion-toolbar>
+</ion-footer>

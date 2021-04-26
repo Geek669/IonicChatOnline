@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "chatepn-ac73c": {
+      "hosting": {
+        "app": [
+          "chatepn-ac73c"
+        ]
+      }
+    }
+  }
+}
