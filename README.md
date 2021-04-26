@@ -3,7 +3,7 @@
 ## Chat desarrollado con Ionic :iphone:
 
 ## Nombre : 
-* *Josue Garrido* 
+" Geek669 "
 
 Inonic Chat desarrollado con Ionic Framework, la aplicacion APK ya instalada en un dispositvo permitira iniciar sesión, chatear jutamente con otros usuarios, los mensajes se iran guardando en Firebase de Google de una manera cifrada, los registros de los chats de los usuarios se iran guardando constantemente y ademas con la funcionalidad
 
@@ -38,10 +38,4 @@ Inonic Chat desarrollado con Ionic Framework, la aplicacion APK ya instalada en 
 
  *Se Necesita versión de Android 9 o más
 
-## Descarga El APK
 
-Descarga `APK` clic en el siguiente enlace [Ionic Chat](https://github.com/JosueGarrido/examen-topicos/raw/master/app-debug.apk). :white_check_mark:
-
-## Enlace del video
-
-Clic en el siguiente enlace [Video explicativo de la aplicación ](https://youtu.be/-RVfjoGQiYQ). :white_check_mark:
